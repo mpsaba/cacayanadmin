@@ -6,13 +6,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 
+console.log("PagesRoutingModule");
+
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
     {
       path: 'dashboard',
-      component: ECommerceComponent,
+      // component: ECommerceComponent,
+      component: DashboardComponent,
     },
     {
       path: 'iot-dashboard',

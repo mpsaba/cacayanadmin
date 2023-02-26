@@ -13,9 +13,9 @@ import { LayoutService } from '../../../../@core/utils/layout.service';
       <h2 class="h4">{{ countryName }}</h2>
     </div>
     <div echarts
-         [options]="option"
-         class="echart"
-         (chartInit)="onChartInit($event)">
+        [options]="option"
+        class="echart"
+        (chartInit)="onChartInit($event)">
     </div>
   `,
 })
@@ -33,6 +33,9 @@ export class CountryOrdersChartComponent implements OnDestroy, OnChanges {
 
   constructor(private theme: NbThemeService,
               private layoutService: LayoutService) {
+
+    console.log("CountryOrdersChartComponent");            
+    
     this.layoutService.onSafeChangeLayoutSize()
       .pipe(
         takeWhile(() => this.alive),

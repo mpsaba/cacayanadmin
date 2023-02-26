@@ -80,6 +80,9 @@ export class DashboardComponent implements OnDestroy {
 
   constructor(private themeService: NbThemeService,
               private solarService: SolarData) {
+    
+    console.log("DashboardComponent");
+    
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
@@ -94,6 +97,8 @@ export class DashboardComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
+    
+    console.log("ngOnDestroy - DashboardComponent");
     this.alive = false;
   }
 }

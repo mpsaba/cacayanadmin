@@ -25,6 +25,8 @@ export class ECommerceChartsPanelComponent implements OnDestroy {
   @ViewChild('profitChart', { static: true }) profitChart: ProfitChartComponent;
 
   constructor(private ordersProfitChartService: OrdersProfitChartData) {
+    console.log("ECommerceChartsPanelComponent");
+
     this.ordersProfitChartService.getOrderProfitChartSummary()
       .pipe(takeWhile(() => this.alive))
       .subscribe((summary) => {

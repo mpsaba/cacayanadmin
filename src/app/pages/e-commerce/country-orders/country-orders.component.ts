@@ -7,21 +7,25 @@ import { CountryOrderData } from '../../../@core/data/country-order';
   selector: 'ngx-country-orders',
   styleUrls: ['./country-orders.component.scss'],
   template: `
-    <nb-card [size]="breakpoint.width >= breakpoints.md ? 'medium' : 'giant'">
-      <nb-card-header>Country Orders Statistics</nb-card-header>
-      <nb-card-body>
-        <ngx-country-orders-map (selectEvent)="selectCountryById($event)"
-                                countryId="USA">
-        </ngx-country-orders-map>
-        <ngx-country-orders-chart [countryName]="countryName"
-                                  [data]="countryData"
-                                  [labels]="countriesCategories"
-                                  maxValue="20">
-        </ngx-country-orders-chart>
-      </nb-card-body>
-    </nb-card>
+    <h1>CountryOrdersComponent</h1>
   `,
 })
+
+
+//   <nb-card [size]="breakpoint.width >= breakpoints.md ? 'medium' : 'giant'">
+//     <nb-card-header>Country Orders Statistics</nb-card-header>
+//     <nb-card-body>
+//       <ngx-country-orders-map (selectEvent)="selectCountryById($event)"
+//                               countryId="USA">
+//       </ngx-country-orders-map>
+//       <ngx-country-orders-chart [countryName]="countryName"
+//                                 [data]="countryData"
+//                                 [labels]="countriesCategories"
+//                                 maxValue="20">
+//       </ngx-country-orders-chart>
+//     </nb-card-body>
+//   </nb-card>
+
 export class CountryOrdersComponent implements OnInit, OnDestroy {
 
   private alive = true;
@@ -39,6 +43,9 @@ export class CountryOrdersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    
+    console.log("CountryOrdersComponent");
+
     this.themeService.onMediaQueryChange()
       .pipe(takeWhile(() => this.alive))
       .subscribe(([oldValue, newValue]) => {

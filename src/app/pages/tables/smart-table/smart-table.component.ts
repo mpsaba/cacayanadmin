@@ -10,6 +10,8 @@ import { SmartTableData } from '../../../@core/data/smart-table';
 })
 export class SmartTableComponent {
 
+  titleName = "";
+  
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -58,6 +60,10 @@ export class SmartTableComponent {
   constructor(private service: SmartTableData) {
     const data = this.service.getData();
     this.source.load(data);
+    console.log("SmartTableComponent");
+    
+
+    this.titleName = "SAMPLE TITLE NAME";
   }
 
   onDeleteConfirm(event): void {

@@ -6,6 +6,7 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { TablesRoutingModule, routedComponents } from './tables-routing.module';
 import { FsIconComponent } from './tree-grid/tree-grid.component';
 import { CustomerTableComponent } from './customer-table/customer-table.component';
+import { UserTableComponent } from './user-table/user-table.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { CustomerTableComponent } from './customer-table/customer-table.componen
     ...routedComponents,
     FsIconComponent,
     CustomerTableComponent,
+    UserTableComponent,
   ],
 })
 export class TablesModule { }

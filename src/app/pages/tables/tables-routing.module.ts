@@ -5,6 +5,7 @@ import { TablesComponent } from './tables.component';
 import { SmartTableComponent } from './smart-table/smart-table.component';
 import { TreeGridComponent } from './tree-grid/tree-grid.component';
 import { CustomerTableComponent } from './customer-table/customer-table.component';
+import { UserTableComponent } from './user-table/user-table.component';
 
 const routes: Routes = [{
   path: '',
@@ -22,6 +23,10 @@ const routes: Routes = [{
       path: 'customer-table',
       component: CustomerTableComponent,
     },
+    {
+      path: 'user-table',
+      component: UserTableComponent,
+    },
   ],
 }];
 
@@ -35,5 +40,6 @@ export const routedComponents = [
   TablesComponent,
   SmartTableComponent,
   TreeGridComponent,
-  CustomerTableComponent
+  CustomerTableComponent,
+  UserTableComponent
 ];

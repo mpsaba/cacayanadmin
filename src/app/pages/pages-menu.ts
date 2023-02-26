@@ -91,7 +91,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'User Management',
-        link: '/pages/tables/smart-table',
+        link: '/pages/tables/user-table',
       },
       {
         title: 'Role Management',
@@ -99,7 +99,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Audit Trail',
-        link: '/pages/tables/smart-table',
+        link: '/pages/tables/tree-grid',
       },
     ],
   },
